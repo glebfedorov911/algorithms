@@ -13,12 +13,18 @@ def binarySearch(array: list, left: int, right: int, target: int) -> int:
     else:
         return binarySearch(array, left, mid-1, target)# смещение влево от середины
 
-array = [2, 3, 5, 7, 8, 9]
-target = 8
+# array = [2, 3, 5, 7, 8, 9]
+# target = 8
+#
+# print(binarySearch(array, 0, len(array)-1, target))
+
+import time
+
+start = time.perf_counter()
+
+array = list(range(100000000))
+target = 988088
 
 print(binarySearch(array, 0, len(array)-1, target))
 
-array = [25, 33, 51, 75, 82, 93]
-target = 18
-
-print(binarySearch(array, 0, len(array)-1, target))
+print(time.perf_counter()-start)

@@ -17,12 +17,18 @@ def binarySearch(array: list, target: int) -> int:
 
     return -1 # нет такого значения в списке
 
-array = [2, 3, 5, 7, 8, 9]
-target = 8
+# array = [2, 3, 5, 7, 8, 9]
+# target = 8
+#
+# print(binarySearch(array, target))
+
+import time
+
+start = time.perf_counter()
+
+array = list(range(100000000))
+target = 988088
 
 print(binarySearch(array, target))
 
-array = [2, 4, 5, 7, 9, 25]
-target = 3
-
-print(binarySearch(array, target))
+print(time.perf_counter()-start)
